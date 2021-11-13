@@ -69,7 +69,7 @@ def create_feed_checker(feed_url):
         if last_id_from_db == "*":
             message = f"**{first_entry.title}**\n```{first_entry.link}```"
             try:
-                if "RARBG" in first_entry.link or "ION10" in first_entry.link:
+                if "RARBG" in first_entry.link or "Galaxy" in first_entry.link or "ION10" in first_entry.link:
                     app.send_message(log_channel, message)
                 else:
                     print(f"{first_entry.link}: >>skipped<<")
