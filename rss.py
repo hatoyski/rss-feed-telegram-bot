@@ -93,7 +93,7 @@ def create_feed_checker(feed_url):
             # ↓ Edit this message as your needs.
             message = f"**{entry.title}**\n```{entry.link}```"
             try:
-                if "ION10" in entry.link or "RARBG" in entry.link or "Galaxy" in entry.link:
+                if "ION10" in entry.link or "RARBG" in entry.link or "GalaxyRG" in entry.link:
                     app.send_message(log_channel, message)
                 else:
                     print(f"{entry.link}: >>skipped<<")
