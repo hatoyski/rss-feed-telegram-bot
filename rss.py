@@ -69,10 +69,11 @@ def create_feed_checker(feed_url):
         if last_id_from_db == "*":
             message = f"**{first_entry.title}**\n```{first_entry.link}```"
             try:
-                if "ION10" in first_entry.link or "RARBG" in first_entry.link or "rarbg" in first_entry.link or or "YTS" in first_entry.link "Galaxy" in first_entry.link:
-                    app.send_message(log_channel, message)
-                else:
-                    print(f"{first_entry.link}: >>skipped<<")
+                app.send_message(log_channel, message)
+                #if "RARBG" in first_entry.link or "ION" in first_entry.link:
+                #    app.send_message(log_channel, message)
+                #else:
+                #    print(f"{first_entry.link}: >>skipped<<")
                 if app2 is not None:
                     mirr_msg = f"{mirr_cmd} {first_entry.link}"
                     app2.send_message(mirr_chat, mirr_msg)
