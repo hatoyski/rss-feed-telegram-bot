@@ -69,7 +69,7 @@ def create_feed_checker(feed_url):
         if last_id_from_db == "*":
             message = f"**{first_entry.title}**\n```{first_entry.link}```"
             try:
-                if "RARBG" in first_entry.link or "Galaxy" in first_entry.link:
+                if "264" in first_entry.link or "720" in first_entry.link or "1080" in first_entry.link or "265" in first_entry.link:
                     app.send_message(log_channel, message)
                 else:
                     print(f"{first_entry.link}: >>skipped<<")
@@ -96,7 +96,7 @@ def create_feed_checker(feed_url):
             # ↓ Edit this message as your needs.
             message = f"**{entry.title}**\n```{entry.link}```"
             try:
-                if "ION10" in entry.link or "720" in entry.link or "1080" in entry.link or "265" in entry.link or "264" in entry.link:
+                if "ION10" in entry.link or "RARBG" in entry.link or "Galaxy" in entry.link:
                     app.send_message(log_channel, message)
                 else:
                     print(f"{entry.link}: >>skipped<<")
